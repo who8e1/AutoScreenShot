@@ -36,6 +36,7 @@ namespace AutoScreenShot
         public MainWindow()
         {
             InitializeComponent();
+            //AutoUpdate Checker (https://github.com/ravibpatel/AutoUpdater.NET)
             AutoUpdater.ShowSkipButton = false;
             AutoUpdater.ShowRemindLaterButton = false;
             AutoUpdater.DownloadPath = Environment.CurrentDirectory;
@@ -45,6 +46,7 @@ namespace AutoScreenShot
                 AutoUpdater.InstallationPath = currentDirectory.Parent.FullName;
             }
             AutoUpdater.Start("https://raw.githubusercontent.com/who8e1/AutoScreenShot/master/LastestUpdate.xml");
+            //Other
             ScreenShotAmount = 0;
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1); // Tick every 1 Second
