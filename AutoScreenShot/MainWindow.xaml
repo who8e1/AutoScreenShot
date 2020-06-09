@@ -78,7 +78,7 @@
                 <Button x:Name="ManualScreenShotBtn" Content="Take Manual Screenshot" Style="{StaticResource ManualButton}" Padding="10" Margin="5" DockPanel.Dock="Right" Click="ManualScreenShotBtn_Click"/>
             </DockPanel>
             <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
-                <CheckBox x:Name="onTopChkBx" Content="Stay on Top" VerticalAlignment="Center" Margin="10" IsChecked="True"/>
+                <CheckBox x:Name="onTopChkBx" Content="Stay on Top" VerticalAlignment="Center" Margin="10" IsChecked="False"/>
                 <TextBlock x:Name="Credits" Text="Written By Ethan Schafer" FontSize="22" FontWeight="Bold" Margin="3"  HorizontalAlignment="Center" Foreground="Black" MouseEnter="Credits_MouseEnter" MouseLeave="Credits_MouseLeave">
                     <TextBlock.Effect>
                         <DropShadowEffect Direction="0" RenderingBias="Quality" Color="#FFCFD0D0" BlurRadius="1" ShadowDepth="3"/>

@@ -23,6 +23,7 @@ using Brush = System.Windows.Media.Brush;
 using Color = System.Windows.Media.Color;
 using MessageBox = System.Windows.MessageBox;
 using Path = System.IO.Path;
+using AutoUpdaterDotNET;
 
 namespace AutoScreenShot
 {
@@ -31,10 +32,22 @@ namespace AutoScreenShot
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public MainWindow()
         {
             InitializeComponent();
+            AutoUpdater.ShowSkipButton = false;
+            AutoUpdater.ShowRemindLaterButton = false;
+            AutoUpdater.DownloadPath = Environment.CurrentDirectory;
+            var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
+            if (currentDirectory.Parent != null)
+            {
+                AutoUpdater.InstallationPath = currentDirectory.Parent.FullName;
+            }
+            AutoUpdater.Start("https://raw.githubusercontent.com/who8e1/AutoScreenShot/master/LastestUpdate.xml");
             ScreenShotAmount = 0;
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1); // Tick every 1 Second
         }
 
         public void ScreenShot(string fileName, string fileLocation)
@@ -100,7 +113,7 @@ namespace AutoScreenShot
         }
 
 
-        DispatcherTimer dispatcherTimer = new DispatcherTimer();
+        
         //DispatcherTimer UiTimer = new DispatcherTimer();
         bool Enabled = false;
         private void AutoScreenShotBtn_Click(object sender, RoutedEventArgs e)
@@ -138,9 +151,6 @@ namespace AutoScreenShot
                                         //Worked
                                         int secs = resultOut;
 
-                                        dispatcherTimer.Tick += dispatcherTimer_Tick;
-                                        dispatcherTimer.Interval = new TimeSpan(0, 0, 1); // Tick every 1 Second
-                                        
                                         //UiTimer
                                         SetMins = mins;
                                         SetSecs = secs;
