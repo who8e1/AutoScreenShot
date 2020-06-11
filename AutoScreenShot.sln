@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScreenShot", "AutoScreenShot\AutoScreenShot.csproj", "{F6DC7CEA-5704-4993-A35F-501713E98053}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AutoScreenshotSetup", "AutoScreenshotSetup\AutoScreenshotSetup.vdproj", "{7389DF70-A6BC-4518-9D74-D69B3BFC1877}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoScreenshotUpdater", "AutoScreenshotUpdater\AutoScreenshotUpdater.csproj", "{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AutoScreenshotNewSetup", "AutoScreenshotNewSetup\AutoScreenshotNewSetup.vdproj", "{1FAF33FB-F791-4ADE-AE57-09F274FBC537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,12 +25,6 @@ Global
 		{F6DC7CEA-5704-4993-A35F-501713E98053}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6DC7CEA-5704-4993-A35F-501713E98053}.Release|x86.ActiveCfg = Release|x86
 		{F6DC7CEA-5704-4993-A35F-501713E98053}.Release|x86.Build.0 = Release|x86
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Debug|Any CPU.ActiveCfg = Debug
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Debug|x86.ActiveCfg = Debug
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Debug|x86.Build.0 = Debug
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Release|Any CPU.ActiveCfg = Release
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Release|x86.ActiveCfg = Release
-		{7389DF70-A6BC-4518-9D74-D69B3BFC1877}.Release|x86.Build.0 = Release
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -39,6 +33,10 @@ Global
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Release|x86.ActiveCfg = Release|Any CPU
 		{04AC1BBF-592A-4CE6-85B2-62C6F0EA7EC3}.Release|x86.Build.0 = Release|Any CPU
+		{1FAF33FB-F791-4ADE-AE57-09F274FBC537}.Debug|Any CPU.ActiveCfg = Debug
+		{1FAF33FB-F791-4ADE-AE57-09F274FBC537}.Debug|x86.ActiveCfg = Debug
+		{1FAF33FB-F791-4ADE-AE57-09F274FBC537}.Release|Any CPU.ActiveCfg = Release
+		{1FAF33FB-F791-4ADE-AE57-09F274FBC537}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

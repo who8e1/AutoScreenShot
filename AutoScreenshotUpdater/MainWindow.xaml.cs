@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Data.SqlTypes;
+using Path = System.IO.Path;
 
 namespace AutoScreenshotUpdater
 {
@@ -25,14 +28,67 @@ namespace AutoScreenshotUpdater
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        bool finish = false;
         private void Update_Btn_Click(object sender, RoutedEventArgs e)
         {
+            if(finish == true)
+            {
+                Console.WriteLine("Hello");
+                //Application.Current.Shutdown();
+                this.Close();
+            }
+            else
+            {
+                string PatchName = "Patch-1.0.2";
+                log("PatchName: " + PatchName);
+                string PatchPath = Path.Combine(Environment.CurrentDirectory, PatchName);
+                log("Patch Path: " + PatchPath);
+                string fileName = string.Empty;
+                string destFile = string.Empty;
+                int fAmount = Directory.GetFiles(PatchPath).Length;
+                log("Amount of Patch Files: " + fAmount.ToString());
+                UpdateProgress.Maximum = fAmount;
+                int fDone = 0;
+                try
+                {
+                    log("Start File Copying");
+                    foreach (string file in Directory.GetFiles(PatchPath))
+                    {
+                        log("Copying File: " + fDone.ToString());
+                        // Use static Path methods to extract only the file name from the path.
+                        fileName = Path.GetFileName(file);
+                        log("File Name: " + fileName);
+                        destFile = Path.Combine(Environment.CurrentDirectory, fileName);
+                        log("Destination: " + destFile);
+                        File.Copy(file, destFile, true);
+                        log("Copy Complete");
+                        fDone += 1;
+                        UpdateProgress.Value = fDone;
+                        log("-------------------------------");
+                    }
+                    log("Deleting: " + PatchPath);
+                    Console.WriteLine(PatchPath);
+                    Directory.Delete(PatchPath, true);
+                    log("Deleted");
+                    Update_Btn.Content = "Close Updater";
+                    Update_Btn.Foreground = Brushes.Green;
+                    finish = true;
+                    log("--- Update Patch Complete ---");
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("An Error has occured, Check the PatchFolder was Extracted Correctly \n " + exc, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    //throw;
+                }
+                
+            }
+            
+        }
 
+        public void log(string logText)
+        {
+            LogTxtBx.Text += string.Format("\n {0}", logText);
+            LogTxtBx.ScrollToEnd();
         }
     }
 }

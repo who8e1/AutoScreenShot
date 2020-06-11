@@ -68,7 +68,7 @@
             </DockPanel>
             <DockPanel DockPanel.Dock="Top" LastChildFill="False">
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
-                    <TextBlock Text="Screen Amount"/>
+                    <TextBlock Text="Screenshots Taken:"/>
                     <TextBlock x:Name="SsAmount" Text="0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
