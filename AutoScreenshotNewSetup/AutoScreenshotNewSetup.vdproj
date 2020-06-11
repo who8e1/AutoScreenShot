@@ -424,7 +424,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AutoScreenshot"
         "ProductCode" = "8:{BA9CD003-191C-4779-A693-51D7B42178F8}"
-        "PackageCode" = "8:{827AC441-C463-481E-8867-C9BB60376E56}"
+        "PackageCode" = "8:{B8BBF782-8B96-40C2-81F2-B37FA73B50F1}"
         "UpgradeCode" = "8:{7D147B33-E84B-4182-B08D-AEC2CD1FCD32}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
