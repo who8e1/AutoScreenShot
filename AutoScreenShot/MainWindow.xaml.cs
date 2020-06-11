@@ -50,6 +50,7 @@ namespace AutoScreenShot
             AutoUpdater.ShowSkipButton = false;
             AutoUpdater.ShowRemindLaterButton = false;
             AutoUpdater.DownloadPath = Environment.CurrentDirectory;
+            //Environment.SpecialFolder.
             //var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
             //if (currentDirectory.Parent != null)
             //{
