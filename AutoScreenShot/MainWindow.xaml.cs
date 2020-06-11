@@ -55,7 +55,7 @@ namespace AutoScreenShot
             //{
             //    AutoUpdater.InstallationPath = currentDirectory.Parent.FullName;
             //}
-            AutoUpdater.ReportErrors = true;
+            //AutoUpdater.ReportErrors = true;
             AutoUpdater.Start("https://raw.githubusercontent.com/who8e1/AutoScreenShot/master/LastestUpdate.xml");
 
             //Other
@@ -142,7 +142,7 @@ namespace AutoScreenShot
                 fileNameTxt.IsEnabled = true;
                 saveLocationTxtBx.IsEnabled = true;
                 Browse.IsEnabled = true;
-                AutoScreenShotBtn.Content = "Start Auto ScreenShots";
+                AutoScreenShotBtn.Content = "Start Auto Screenshots";
                 AutoScreenShotBtn.Style = (Style)FindResource("StartButton");
             }
             else
@@ -162,27 +162,39 @@ namespace AutoScreenShot
                                     int mins = resultOut;
                                     if (int.TryParse(timeSecs.Text, out resultOut))
                                     {
-                                        //Worked
-                                        int secs = resultOut;
+                                        Console.WriteLine(resultOut.ToString());
+                                        if(resultOut >= 0 )
+                                        {
+                                            //Worked
+                                            int secs = resultOut;
 
-                                        //UiTimer
-                                        SetMins = mins;
-                                        SetSecs = secs;
-                                        //UiTimer.Tick += UiTimer_Tick;
-                                        //UiTimer.Interval = new TimeSpan(0, 0, 1);
-                                        TotalSecs = (SetMins * 60) + SetSecs;
-                                        dispatcherTimer.Start();
-                                        //UiTimer.Start();
+                                            //UiTimer
+                                            SetMins = mins;
+                                            SetSecs = secs;
+                                            //UiTimer.Tick += UiTimer_Tick;
+                                            //UiTimer.Interval = new TimeSpan(0, 0, 1);
+                                            TotalSecs = (SetMins * 60) + SetSecs;
+                                            dispatcherTimer.Start();
+                                            //UiTimer.Start();
 
-                                        timeMins.IsEnabled = false;
-                                        timeSecs.IsEnabled = false;
-                                        fileNameTxt.IsEnabled = false;
-                                        saveLocationTxtBx.IsEnabled = false;
-                                        Browse.IsEnabled = false;
+                                            timeMins.IsEnabled = false;
+                                            timeSecs.IsEnabled = false;
+                                            fileNameTxt.IsEnabled = false;
+                                            saveLocationTxtBx.IsEnabled = false;
+                                            Browse.IsEnabled = false;
 
-                                        AutoScreenShotBtn.Content = "Stop Auto ScreenShots";
-                                        AutoScreenShotBtn.Style = (Style)FindResource("StopButton");
-                                        Enabled = true;
+                                            AutoScreenShotBtn.Content = "Stop Auto ScreenShots";
+                                            AutoScreenShotBtn.Style = (Style)FindResource("StopButton");
+                                            Enabled = true;
+                                        }
+                                        else
+                                        {
+                                            timeSecs.Focus();
+                                            timeSecs.SelectAll();
+                                            MessageBox.Show("Second Value is Out of Range \n It needs to greater then 0", "Value Invalid", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+                                        }
+
                                     }
                                     else
                                     {
@@ -219,6 +231,34 @@ namespace AutoScreenShot
                 }
             }
         }
+
+        private void ResetAllBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //resets all Fields
+            saveLocationTxtBx.Text = string.Empty;
+            ScreenShotAmount = 0;
+            SsAmount.Text = ScreenShotAmount.ToString();
+            timeMins.Text = string.Empty;
+            timeSecs.Text = string.Empty;
+            fileNameTxt.Text = string.Empty;
+
+            dispatcherTimer.Stop();
+            timeMins.IsEnabled = true;
+            timeSecs.IsEnabled = true;
+            fileNameTxt.IsEnabled = true;
+            saveLocationTxtBx.IsEnabled = true;
+            Browse.IsEnabled = true;
+            AutoScreenShotBtn.Content = "Start Auto Screenshots";
+            AutoScreenShotBtn.Style = (Style)FindResource("StartButton");
+
+        }
+
+        private void ResetCountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ScreenShotAmount = 0;
+            SsAmount.Text = ScreenShotAmount.ToString();
+        }
+
         int TotalSecs = 0;
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
@@ -386,6 +426,7 @@ namespace AutoScreenShot
         int R, G, B = 0;
         bool Rev = false;
         int add = 1;
+
         private void colourTimer_Tick(object sender, EventArgs e)
         {
             

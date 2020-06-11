@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoScreenShot"
         mc:Ignorable="d"
-        Title="Auto Screenshot" Height="450" Width="800" MinHeight="310" MinWidth="680" Topmost="{Binding IsChecked, ElementName=onTopChkBx, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
+        Title="Auto Screenshot" Height="450" Width="850" MinHeight="310" MinWidth="680" Topmost="{Binding IsChecked, ElementName=onTopChkBx, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -29,9 +29,15 @@
         </Style>
 
         <Style TargetType="Button" x:Key="ManualButton">
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontWeight" Value="Black"/>
             <Setter Property="Foreground" Value="DarkOrange"/>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="ResetButton">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Black"/>
+            <Setter Property="Foreground" Value="CadetBlue"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -75,7 +81,10 @@
                     <TextBlock Text="Time: "/>
                     <TextBlock x:Name="SsTimer" Text="0:00"/>
                 </StackPanel>
+                
                 <Button x:Name="ManualScreenShotBtn" Content="Take Manual Screenshot" Style="{StaticResource ManualButton}" Padding="10" Margin="5" DockPanel.Dock="Right" Click="ManualScreenShotBtn_Click"/>
+                <Button x:Name="ResetAllBtn" Content="Reset All" Style="{StaticResource ResetButton}" Padding="10" Margin="5" DockPanel.Dock="Right" Click="ResetAllBtn_Click"/>
+                <Button x:Name="ResetCountBtn" Content="Reset Count" Style="{StaticResource ResetButton}" Padding="10" Margin="5" DockPanel.Dock="Right" Click="ResetCountBtn_Click"/>
             </DockPanel>
             <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
                 <CheckBox x:Name="onTopChkBx" Content="Stay on Top" VerticalAlignment="Center" Margin="10" IsChecked="False"/>
@@ -84,7 +93,7 @@
                         <DropShadowEffect Direction="0" RenderingBias="Quality" Color="#FFCFD0D0" BlurRadius="1" ShadowDepth="3"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBlock Text="v1.0.2 - Test" Margin="2" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                <TextBlock Text="v1.0.2" Margin="2" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
             <Button x:Name="AutoScreenShotBtn" Content="Start Auto Screenshots" Style="{StaticResource StartButton}" Click="AutoScreenShotBtn_Click"/>
             

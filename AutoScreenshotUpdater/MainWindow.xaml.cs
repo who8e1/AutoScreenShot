@@ -16,6 +16,7 @@ using System.IO;
 using System.Data.SqlTypes;
 using Path = System.IO.Path;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace AutoScreenshotUpdater
 {
@@ -29,20 +30,25 @@ namespace AutoScreenshotUpdater
             InitializeComponent();
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo()
+            {
+                Arguments = "/C choice /C Y /N /D Y /T 1 & Del \"" + "AutoScreenshotUpdater.exe" + "\"",
+                WindowStyle = ProcessWindowStyle.Hidden,
+                CreateNoWindow = true,
+                FileName = "cmd.exe"
+            });
+            base.OnClosing(e);  
+        }
+
         bool finish = false;
         private void Update_Btn_Click(object sender, RoutedEventArgs e)
         {
             if(finish == true)
             {
                 Console.WriteLine("Hello");
-                Process.Start(new ProcessStartInfo()
-                {
-                    Arguments = "/C choice /C Y /N /D Y /T 3 & Del \"" + "AutoScreenshotUpdater.exe" + "\"",
-                    WindowStyle = ProcessWindowStyle.Hidden,
-                    CreateNoWindow = true,
-                    FileName = "cmd.exe"
-                });
-                Process.Start(Path.Combine(Environment.CurrentDirectory, "AutoScreenShot.exe"));
+                //Process.Start(Path.Combine(Environment.CurrentDirectory, "AutoScreenShot.exe"));
                 this.Close();
             }
             else
@@ -105,6 +111,11 @@ namespace AutoScreenshotUpdater
         {
             LogTxtBx.Text += string.Format("\n {0}", logText);
             LogTxtBx.ScrollToEnd();
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("If this updater won't complete the update then close it and perform the update manually by copying the contents of the patch folder into the main directory and replacing all copied files", "In case of issues", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

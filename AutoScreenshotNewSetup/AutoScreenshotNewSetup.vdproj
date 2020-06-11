@@ -15,43 +15,43 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_146DA077AEC85BAAC20C384683468625"
+        "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2F59132DBF5D1056CE0B37CB4BD36F20"
+        "MsmKey" = "8:_64D58E713E37E5EC720CB8430E56BA15"
         "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4507E924D0CC3FFE804CC964AC997EC4"
+        "MsmKey" = "8:_94C03340B9580C2F9695772D9BC952F3"
         "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_611E6BBA16197C8CDC49DB50F54BA0F3"
+        "MsmKey" = "8:_A2364E4EE95BB965C041B77392357533"
+        "OwnerKey" = "8:_146DA077AEC85BAAC20C384683468625"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A2364E4EE95BB965C041B77392357533"
         "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6640CDBD26089DDA29A307BC4FEBEC44"
-        "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF84CFE0B0B026AE5A758BFF630F0D27"
-        "OwnerKey" = "8:_4507E924D0CC3FFE804CC964AC997EC4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF84CFE0B0B026AE5A758BFF630F0D27"
+        "MsmKey" = "8:_B56D8E88671E22D69EB21F8C16781EFC"
         "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -64,37 +64,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2F59132DBF5D1056CE0B37CB4BD36F20"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2D67C04E0F3D4C53A536FC2F3FC8D702"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4507E924D0CC3FFE804CC964AC997EC4"
+        "OwnerKey" = "8:_146DA077AEC85BAAC20C384683468625"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DF84CFE0B0B026AE5A758BFF630F0D27"
+        "OwnerKey" = "8:_A2364E4EE95BB965C041B77392357533"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_611E6BBA16197C8CDC49DB50F54BA0F3"
+        "OwnerKey" = "8:_94C03340B9580C2F9695772D9BC952F3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6640CDBD26089DDA29A307BC4FEBEC44"
+        "OwnerKey" = "8:_B56D8E88671E22D69EB21F8C16781EFC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_64D58E713E37E5EC720CB8430E56BA15"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -122,6 +122,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -184,45 +192,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2F59132DBF5D1056CE0B37CB4BD36F20"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_2F59132DBF5D1056CE0B37CB4BD36F20"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3C6553A52F92473E931C5F1CE76EDC34"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4507E924D0CC3FFE804CC964AC997EC4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_146DA077AEC85BAAC20C384683468625"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4507E924D0CC3FFE804CC964AC997EC4"
+                    "_146DA077AEC85BAAC20C384683468625"
                     {
                     "Name" = "8:Microsoft.Expression.Interactions.dll"
                     "Attributes" = "3:512"
@@ -246,14 +223,45 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_611E6BBA16197C8CDC49DB50F54BA0F3"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_64D58E713E37E5EC720CB8430E56BA15"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_64D58E713E37E5EC720CB8430E56BA15"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3C6553A52F92473E931C5F1CE76EDC34"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_94C03340B9580C2F9695772D9BC952F3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_611E6BBA16197C8CDC49DB50F54BA0F3"
+                    "_94C03340B9580C2F9695772D9BC952F3"
                     {
                     "Name" = "8:Ookii.Dialogs.Wpf.dll"
                     "Attributes" = "3:512"
@@ -277,20 +285,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6640CDBD26089DDA29A307BC4FEBEC44"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A2364E4EE95BB965C041B77392357533"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AutoUpdater.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6640CDBD26089DDA29A307BC4FEBEC44"
+                    "_A2364E4EE95BB965C041B77392357533"
                     {
-                    "Name" = "8:AutoUpdater.NET.dll"
+                    "Name" = "8:System.Windows.Interactivity.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:AutoUpdater.NET.dll"
+            "SourcePath" = "8:System.Windows.Interactivity.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C6553A52F92473E931C5F1CE76EDC34"
@@ -308,20 +316,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DF84CFE0B0B026AE5A758BFF630F0D27"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B56D8E88671E22D69EB21F8C16781EFC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:AutoUpdater.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DF84CFE0B0B026AE5A758BFF630F0D27"
+                    "_B56D8E88671E22D69EB21F8C16781EFC"
                     {
-                    "Name" = "8:System.Windows.Interactivity.dll"
+                    "Name" = "8:AutoUpdater.NET.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:System.Windows.Interactivity.dll"
+            "SourcePath" = "8:AutoUpdater.NET.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3C6553A52F92473E931C5F1CE76EDC34"
@@ -378,7 +386,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_3C6553A52F92473E931C5F1CE76EDC34"
             {
-            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -416,7 +424,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AutoScreenshot"
         "ProductCode" = "8:{BA9CD003-191C-4779-A693-51D7B42178F8}"
-        "PackageCode" = "8:{5204B983-F4C5-4C2C-A814-EC2D8BF4785A}"
+        "PackageCode" = "8:{827AC441-C463-481E-8867-C9BB60376E56}"
         "UpgradeCode" = "8:{7D147B33-E84B-4182-B08D-AEC2CD1FCD32}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -437,7 +445,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:1"
+        "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"

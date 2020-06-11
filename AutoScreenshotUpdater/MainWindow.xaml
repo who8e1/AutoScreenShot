@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoScreenshotUpdater"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="500">
+        Title="Updater" Height="600" Width="500" MinHeight="550" MinWidth="450">
     <DockPanel LastChildFill="True">
-        <TextBlock Text="Auto Screenshot Updater" FontSize="30" HorizontalAlignment="Center" FontWeight="Black" Padding="10" DockPanel.Dock="Top"/>
+        <Grid DockPanel.Dock="Top">
+            <TextBlock Text="Auto Screenshot Updater" FontSize="30" HorizontalAlignment="Center" FontWeight="Black" Padding="10" />
+            <Button x:Name="Help" Content="?" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" MinWidth="25" FontWeight="Black" Margin="5" Click="Help_Click"/>
+        </Grid>
+        
         <TextBlock Text="version 1.0.2" FontSize="20" HorizontalAlignment="Center" FontWeight="Black" Padding="10" DockPanel.Dock="Top"/>
         <ProgressBar x:Name="UpdateProgress" Height="25" Margin="3"  DockPanel.Dock="Top"/>
         <Button x:Name="Update_Btn" Content="Update Software" FontSize="28" MinHeight="60" Margin="3" FontWeight="Bold" Click="Update_Btn_Click" DockPanel.Dock="Top"/>
+        <TextBlock Text="This Updater will self-destruct when closed" HorizontalAlignment="Center" DockPanel.Dock="Bottom"/>
         <TextBox x:Name="LogTxtBx" IsReadOnly="True" MinHeight="150" Margin="3" VerticalScrollBarVisibility="Visible" DockPanel.Dock="Bottom"/>
         
     </DockPanel>
