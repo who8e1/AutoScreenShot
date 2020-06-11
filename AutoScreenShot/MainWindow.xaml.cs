@@ -24,6 +24,7 @@ using Color = System.Windows.Media.Color;
 using MessageBox = System.Windows.MessageBox;
 using Path = System.IO.Path;
 using AutoUpdaterDotNET;
+using System.Diagnostics;
 
 namespace AutoScreenShot
 {
@@ -36,16 +37,27 @@ namespace AutoScreenShot
         public MainWindow()
         {
             InitializeComponent();
+            //Check for Update program
+            string updaterPath = Path.Combine(Environment.CurrentDirectory, "AutoScreenshotUpdater.exe");
+            if (File.Exists(updaterPath))
+            {
+                Console.WriteLine("Updater Found");
+                Process.Start(updaterPath);
+                this.Close();
+            }
+
             //AutoUpdate Checker (https://github.com/ravibpatel/AutoUpdater.NET)
             AutoUpdater.ShowSkipButton = false;
             AutoUpdater.ShowRemindLaterButton = false;
             AutoUpdater.DownloadPath = Environment.CurrentDirectory;
-            var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
-            if (currentDirectory.Parent != null)
-            {
-                AutoUpdater.InstallationPath = currentDirectory.Parent.FullName;
-            }
+            //var currentDirectory = new DirectoryInfo(Environment.CurrentDirectory);
+            //if (currentDirectory.Parent != null)
+            //{
+            //    AutoUpdater.InstallationPath = currentDirectory.Parent.FullName;
+            //}
+            AutoUpdater.ReportErrors = true;
             AutoUpdater.Start("https://raw.githubusercontent.com/who8e1/AutoScreenShot/master/LastestUpdate.xml");
+
             //Other
             ScreenShotAmount = 0;
             dispatcherTimer.Tick += dispatcherTimer_Tick;

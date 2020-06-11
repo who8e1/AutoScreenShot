@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Data.SqlTypes;
 using Path = System.IO.Path;
+using System.Diagnostics;
 
 namespace AutoScreenshotUpdater
 {
@@ -34,13 +35,24 @@ namespace AutoScreenshotUpdater
             if(finish == true)
             {
                 Console.WriteLine("Hello");
-                //Application.Current.Shutdown();
+                Process.Start(new ProcessStartInfo()
+                {
+                    Arguments = "/C choice /C Y /N /D Y /T 3 & Del \"" + "AutoScreenshotUpdater.exe" + "\"",
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    CreateNoWindow = true,
+                    FileName = "cmd.exe"
+                });
+                Process.Start(Path.Combine(Environment.CurrentDirectory, "AutoScreenShot.exe"));
                 this.Close();
             }
             else
             {
+                string PatchZipName = "AutoScreenshot_v1.0.2-Patch.zip";
+                log("Patch.Zip Name: " + PatchZipName);
+                string PatchZipPath = Path.Combine(Environment.CurrentDirectory, PatchZipName);
+                log("Patch.Zip Path: " + PatchZipPath);
                 string PatchName = "Patch-1.0.2";
-                log("PatchName: " + PatchName);
+                log("Patch Name: " + PatchName);
                 string PatchPath = Path.Combine(Environment.CurrentDirectory, PatchName);
                 log("Patch Path: " + PatchPath);
                 string fileName = string.Empty;
@@ -69,6 +81,10 @@ namespace AutoScreenshotUpdater
                     log("Deleting: " + PatchPath);
                     Console.WriteLine(PatchPath);
                     Directory.Delete(PatchPath, true);
+                    log("Deleted");
+
+                    log("Deleting: " + PatchZipName);
+                    Directory.Delete(PatchZipPath, true);
                     log("Deleted");
                     Update_Btn.Content = "Close Updater";
                     Update_Btn.Foreground = Brushes.Green;

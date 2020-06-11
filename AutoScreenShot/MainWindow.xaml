@@ -84,7 +84,7 @@
                         <DropShadowEffect Direction="0" RenderingBias="Quality" Color="#FFCFD0D0" BlurRadius="1" ShadowDepth="3"/>
                     </TextBlock.Effect>
                 </TextBlock>
-                <TextBlock Text="v1.0.2" Margin="2" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                <TextBlock Text="v1.0.2 - Test" Margin="2" FontSize="10" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
             </Grid>
             <Button x:Name="AutoScreenShotBtn" Content="Start Auto Screenshots" Style="{StaticResource StartButton}" Click="AutoScreenShotBtn_Click"/>
             
