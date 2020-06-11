@@ -83,8 +83,8 @@ namespace AutoScreenshotUpdater
                     Directory.Delete(PatchPath, true);
                     log("Deleted");
 
-                    log("Deleting: " + PatchZipName);
-                    Directory.Delete(PatchZipPath, true);
+                    log("Deleting: " + PatchZipPath);
+                    File.Delete(PatchZipPath);
                     log("Deleted");
                     Update_Btn.Content = "Close Updater";
                     Update_Btn.Foreground = Brushes.Green;
